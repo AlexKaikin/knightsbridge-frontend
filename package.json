@@ -9,6 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
+    "gh": "gulp deployGh --build",
     "svgSprive": "gulp svgSprive"
   },
   "author": "",
