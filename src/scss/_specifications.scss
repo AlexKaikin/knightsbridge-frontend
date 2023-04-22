@@ -1,0 +1,204 @@
+.specifications {
+  background: #f4f5f5;
+
+  .container {
+    display: flex;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @media only screen and (max-width: 1040px) {
+      flex-direction: column;
+
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+
+    @media only screen and (max-width: 576px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .specifications__info {
+      flex: 0 0 59%;
+
+      display: flex;
+      gap: 60px;
+
+      position: relative;
+
+      @media only screen and (max-width: 1040px) {
+        flex-wrap: wrap;
+        gap: 35px;
+      }
+
+      .specifications__items {
+        flex: 0 0 193px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media only screen and (max-width: 640px) {
+          flex: 0 0 100%;
+
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .specifications__item {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          font-weight: 400;
+          font-size: 14px;
+          color: #777777;
+
+          .specifications__count {
+            font-weight: 700;
+            font-size: 16px;
+            color: #303030;
+
+            span {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .specifications__text {
+        flex: 0 0 320px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #303030;
+
+        @media only screen and (max-width: 640px) {
+          flex: 0 0 100%;
+        }
+      }
+
+      .specifications__more {
+        display: none;
+
+        @media only screen and (max-width: 1040px) {
+          display: block;
+          position: absolute;
+          bottom: -60px;
+        }
+
+        a {
+          font-family: 'Baron Neue';
+          font-size: 18px;
+          line-height: 22px;
+          color: #7a1b1b;
+          border-bottom: 2px solid #7a1b1b;
+          padding-bottom: 3px;
+        }
+      }
+    }
+
+    .specifications__gallery-container {
+      position: relative;
+      width: 100%;
+
+      .specifications__gallery {
+        position: absolute;
+        top: -95%;
+
+        display: grid;
+        gap: 30px;
+        grid-template-rows: auto;
+        grid-template-areas:
+          'gallery-1 gallery-1 gallery-1'
+          'gallery-2 gallery-3 .';
+
+        @media only screen and (max-width: 1040px) {
+          position: relative;
+          top: 100px;
+
+          grid-template-areas:
+            'gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1 gallery-1'
+            'gallery-2 gallery-3 . . . . . . . . . .';
+        }
+
+        @media only screen and (max-width: 880px) {
+          position: relative;
+          top: 100px;
+
+          grid-template-areas:
+            'gallery-1 gallery-1 gallery-1 gallery-1 gallery-1'
+            'gallery-2 gallery-3 . . .';
+        }
+
+        @media only screen and (max-width: 640px) {
+          position: relative;
+          top: 100px;
+
+          grid-template-areas:
+            'gallery-1 gallery-1'
+            'gallery-2 gallery-3';
+        }
+
+        .gallery__item {
+          width: 100%;
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          .gallery__text {
+            position: absolute;
+            bottom: 0px;
+            padding: 35px;
+            font-size: 16px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+
+            @media only screen and (max-width: 1040px) {
+              padding: 25px 15px;
+            }
+          }
+        }
+
+        .gallery-1 {
+          grid-area: gallery-1;
+          width: 615px;
+
+          @media only screen and (max-width: 1040px) {
+            width: 100%;
+          }
+        }
+
+        .gallery-2 {
+          grid-area: gallery-2;
+          width: 232px;
+
+          @media only screen and (max-width: 1040px) {
+            width: 236px;
+          }
+
+          @media only screen and (max-width: 576px) {
+            width: 100%;
+          }
+        }
+
+        .gallery-3 {
+          grid-area: gallery-3;
+          width: 232px;
+
+          @media only screen and (max-width: 1040px) {
+            width: 236px;
+          }
+
+          @media only screen and (max-width: 576px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

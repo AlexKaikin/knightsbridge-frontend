@@ -1,0 +1,130 @@
+.features {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media only screen and (max-width: 768px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .features__title {
+      font-family: 'Baron Neue';
+      font-size: 22px;
+      line-height: 30px;
+      color: #08131f;
+      max-width: 450px;
+
+      span {
+        font-size: 36px;
+        line-height: 44px;
+        display: block;
+
+        @media only screen and (max-width: 576px) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .features__slides-container {
+      position: relative;
+
+      .features__slides {
+        display: flex;
+
+        position: relative;
+        transition: all ease 0.5s;
+
+        counter-reset: numbers;
+
+        .features__slide {
+          flex: 0 0 400px;
+          padding-right: 100px;
+
+          position: relative;
+
+          @media only screen and (max-width: 768px) {
+            flex: 0 0 300px;
+            padding-right: 40px;
+          }
+
+          @media only screen and (max-width: 576px) {
+            flex: 0 0 295px;
+            padding-right: 35px;
+          }
+
+          &::before {
+            position: absolute;
+            left: -6px;
+            top: 50px;
+            counter-increment: numbers;
+            content: '0' counter(numbers);
+            font-family: 'Baron Neue';
+            font-size: 100px;
+            line-height: 100px;
+            color: #7a1b1b;
+            opacity: 0.1;
+          }
+
+          .slide__title {
+            font-family: 'Baron Neue';
+            font-size: 22px;
+            line-height: 30px;
+            color: #08131f;
+            margin-bottom: 16px;
+            padding-top: 20px;
+            margin-top: 125px;
+            background-color: #fff;
+
+            position: relative;
+            z-index: 1;
+          }
+
+          .slide__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333;
+            margin-bottom: 25px;
+          }
+
+          .slide__link {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #7a1b1b;
+          }
+        }
+      }
+
+      .slides__pagination {
+        position: absolute;
+        top: -41px;
+        right: 0;
+
+        display: flex;
+
+        @media only screen and (max-width: 768px) {
+          top: 10px;
+        }
+
+        @media only screen and (max-width: 576px) {
+          top: 30px;
+        }
+
+        .pagination__btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          padding: 10px 15px;
+          transition: all ease 0.5s;
+
+          &:hover {
+            box-shadow: 0 0 0 2px #7a1b1b;
+          }
+        }
+      }
+    }
+  }
+}
