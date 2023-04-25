@@ -12,7 +12,7 @@
   <title>Knightsbridge private park</title>
   <meta name="description" content="Knightsbridge private park – элитный район Лондона в центре Москвы" />
 
-  <link rel="stylesheet" href="css/style.min.css?_v=20230422182920" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230425175308" />
 </head>
 
   <body>
@@ -88,19 +88,19 @@
   <div class="container">
     <div class="map__text">
       <div class="map__title">на карте</div>
-      <div class="map__items">
-        <button class="map__item">Красота и здоровье <span>7</span></button>
-        <button class="map__item">Магазины <span>7</span></button>
-        <button class="map__item">Обучение <span>7</span></button>
-        <button class="map__item">Детсад <span>7</span></button>
-        <button class="map__item">Отдых, развлечения <span>7</span></button>
-      </div>
+      <div class="map__category"></div>
     </div>
     <div class="map__iframe">
-      <picture><source srcset="img/map/map.webp" type="image/webp"><img src="img/map/map.png" alt="map" /></picture>
+      <div id="map"></div>
     </div>
   </div>
 </section>
+
+<script
+  src="https://api-maps.yandex.ru/2.1/?apikey=6784bb60-978d-41c2-9fdb-c4ffdd310056&lang=ru_RU"
+  type="text/javascript"
+></script>
+
 
         <section class="features">
   <div class="container">
@@ -188,6 +188,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/script.min.js?_v=20230422182920"></script>
+    <script src="js/script.min.js?_v=20230425175308"></script>
   </body>
 </html>
