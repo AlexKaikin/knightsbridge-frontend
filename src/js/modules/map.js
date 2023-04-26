@@ -33,18 +33,20 @@ function init() {
   )
 
   mapCategoryDiv.addEventListener('click', e => {
-    const category = e.target.closest('.category__item').dataset.category
-    const isChecked =
-      e.target.closest('.category__item').dataset.checked === 'true'
-        ? true
-        : false
+    if (e.target.closest('.category__item')) {
+      const category = e.target.closest('.category__item').dataset.category
+      const isChecked =
+        e.target.closest('.category__item').dataset.checked === 'true'
+          ? true
+          : false
 
-    if (isChecked) {
-      e.target.closest('.category__item').dataset.checked = false
-      objectManager.remove(getPlaceMarkByCategory(data, category))
-    } else {
-      e.target.closest('.category__item').dataset.checked = true
-      objectManager.add(getPlaceMarkByCategory(data, category))
+      if (isChecked) {
+        e.target.closest('.category__item').dataset.checked = false
+        objectManager.remove(getPlaceMarkByCategory(data, category))
+      } else {
+        e.target.closest('.category__item').dataset.checked = true
+        objectManager.add(getPlaceMarkByCategory(data, category))
+      }
     }
   })
 }
